@@ -5,6 +5,9 @@ let number = ''
 // Loop to get user input and add to array
 while (number !== -1) {
   number = Number(prompt('Enter a number:'))
+  if (number === -1) {
+    break // Exit the loop if the user enters -1
+  }
   if (isNaN(number)) {
     alert('That is not a number, please try again')
   } else {

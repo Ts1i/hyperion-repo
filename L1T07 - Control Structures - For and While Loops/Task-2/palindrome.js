@@ -19,14 +19,14 @@ let isPalindrome = true;
 // Check that the charaacters are equivalent towards the center of the string, until the indeces are equivalent
 // If the characters are not equivalent, the string is not a palindrome
 
-do {
+while (i <= reverseIndex / 2) {
     if (userInput[i] !== userInput[reverseIndex - i]) {
         alert(`${userInput} is not a palindrome`);
         isPalindrome = false;
         break
     }
     i++;
-} while (i < reverseIndex-i);
+}
 
 if (isPalindrome) {
     alert(`${userInput} is a palindrome`)    
