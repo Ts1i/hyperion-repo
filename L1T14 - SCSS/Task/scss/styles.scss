@@ -1,0 +1,9 @@
+// Invert icon upon hover - nested styling example
+.btn-outline-dark:hover {
+  .fas.fa-search {
+    filter: invert(1);
+  }
+  .fas.fa-bars {
+    filter: invert(1);
+  }
+}

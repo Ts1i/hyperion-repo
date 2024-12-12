@@ -1,0 +1,6 @@
+.btn-outline-dark:hover .fas.fa-search {
+  filter: invert(1);
+}
+.btn-outline-dark:hover .fas.fa-bars {
+  filter: invert(1);
+}/*# sourceMappingURL=styles.css.map */
