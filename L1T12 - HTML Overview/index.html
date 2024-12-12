@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="myTitle">Tshwanelo's bio</title>
+
+    <!-- CSS styles for search box positioning and text highlighting -->
+    <style>
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .highlight {
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <!-- Search form container - positioned top right -->
+    <div class="search-container">
+        <!-- Search form using GET method that submits to /search endpoint -->
+        <form id="searchForm" method="get" action="/search">
+            <input type="text" id="searchInput" name="query" placeholder="Search here">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Main heading and profile image -->
+    <h1>Hi there, I'm Tshwanelo.</h1>
+    <img src="https://i.imgur.com/cUNrEDq.jpeg" alt="Image of Tshwanelo" width="200" height="200"><br>
+
+    <!-- Contact information section -->
+    <h2>Contact details</h2>
+    <ul>
+        <li>Email: t.matsane@gmail.com</li>
+        <li>Phone (masked): +1234567890</li>
+        <!-- Social media links with target="_blank" to open in new tab -->
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/tshwanelo-matsane-58a86166/" target="_blank">linkedin.com/in/tshwanelo</a></li>
+        <li>X: <a href="https://x.com/TshwanTshwan" target="_blank">@tshwantshwan</a></li>
+        </ul>
+
+        <!-- Biography section -->
+        <h3>Bio</h3>
+        <p id="bio" style="width: 300px; padding: 5px;">I am a seasoned strategy consultant with extensive experience in the tech industry. I have a passion for leveraging technology to solve complex business problems and drive innovation.</p>
+        
+        <!-- Skills section -->
+        <h3>My skills</h3>
+        <ul>
+        <li>Strategic Planning</li>
+        <li>Business Analysis</li>
+        <li>Project Management</li>
+        <li>Data Analysis</li>
+        <li>Digital Transformation</li>
+        <li>Leadership</li>
+        <li>Stakeholder Management</li>
+        </ul>
+        
+        <!-- Contact form section -->
+        <h3>Contact Me</h3>
+        <form action="mailto:t.matsane@gmail.com" method="post" enctype="text/plain">
+            <div style="margin-bottom: 1rem;">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required style="width: 300px; padding: 5px;">
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required style="width: 300px; padding: 5px;">
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required style="width: 300px; padding: 5px;"></textarea>
+            </div>
+            
+            <button type="submit" style="padding: 8px 20px; background-color: rgb(31, 126, 126); color: white; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
+        </form>
+    
+    <script>
+        // Add an event listener to the form with the ID 'searchForm'
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior - Not to reload the page.
+            event.preventDefault();
+
+            // Get the value entered in the search input field with the ID 'searchInput'
+            let query = document.getElementById('searchInput').value;
+
+            // Get the entire HTML content of the body element
+            let content = document.body.innerHTML;
+
+            // Create a regular expression to find all occurrences of the search query, case-insensitive
+            let regex = new RegExp(`(${query})`, 'gi');
+
+            // Replace all occurrences of the search query with the same text wrapped in a <span> with the class 'highlight'
+            document.body.innerHTML = content.replace(regex, '<span class="highlight">$1</span>');
+        });
+    </script>
+</body>
+</html>
