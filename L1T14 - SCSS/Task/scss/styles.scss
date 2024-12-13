@@ -7,3 +7,20 @@
     filter: invert(1);
   }
 }
+
+// Mixin for the seperator line
+@mixin line($color: black, $thickness: 1px, $margin: 1rem 0) {
+  content: '';
+  display: block;
+  width: 100%;
+  height: $thickness;
+  background-color: $color;
+  margin: $margin;
+  padding: 0 1rem; // Added padding for left and right spacing
+}
+
+// Reusable class using the mixin
+.line {
+  @include line;
+  padding: 0 1rem; // Added padding to match content alignment
+}
