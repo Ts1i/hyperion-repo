@@ -1,0 +1,5 @@
+/* Crosses out selected items */
+.checked {
+    text-decoration: line-through;
+    color: #888;
+}
