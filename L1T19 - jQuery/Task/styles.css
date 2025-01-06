@@ -1,0 +1,188 @@
+/* Import Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* Global reset and Poppins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* !!! Section 1 !!! */
+/* Our Story Section */
+#our-story {
+  position: relative;
+  min-height: 100vh; /* Full viewport */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Background image (cover) */
+#our-story .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay for better text visibility */
+#our-story::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Headings */
+h1 {
+  font-size: 10rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+  position: relative;
+}
+
+#our-story h2 {
+  font-size: 7rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Content Wrapper (center + large font) */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1500px;
+  margin: 1rem;
+  font-size: 5rem;
+}
+
+/* !!! Section 2 !!! */
+/* Our Food Section */
+#our-food {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rem;
+  gap: 2rem;
+}
+
+h2 {
+  font-size: 7rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.content-wrapper {
+  flex: 0 1 60%;
+  margin: 3rem;
+  font-size: 3rem;
+}
+
+.food-image {
+  flex: 0 1 40%;
+  max-width: 50%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  margin: 5rem;
+}
+
+#side-by-side-content {
+  width: 50%;
+}
+
+/* !!! Section 3 !!! */
+/* Our People */
+#our-people {
+  padding: 4rem;
+  text-align: center;
+}
+
+.center-content {
+  text-align: center;
+  font-size: 3rem;
+  max-width: 50%;
+  margin: 10rem auto;
+  padding: 0 2rem;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.team-member {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+.headshot {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.caption {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+.role {
+  color: #666;
+  font-size: 3rem;
+  margin-bottom: 8rem;
+}
+
+/* Hover menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  font-size: 2rem;
+  padding: 20px 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: #000;
+}
+
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+}
+
+section {
+  position: relative;
+}
