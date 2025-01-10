@@ -25,9 +25,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Custom JS -->
-    <script src="../main.js"></script>
-
     <title>scifiPub</title>
   </head>
 
@@ -61,7 +58,14 @@
               <a class="nav-link active" href="index.html">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../page-3-signup/index.html">Sign up</a>
+              <a class="nav-link" href="../page-3-contactme/index.html"
+                >Contact me</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../page-4-saveforlater/index.html"
+                >Save for later</a
+              >
             </li>
           </ul>
         </div>
@@ -85,7 +89,7 @@
 
     <!-- Main body -->
     <div class="container">
-      <!-- Featured blog -->
+      <!-- Featured blog 1 -->
       <section class="featured-blog py-5">
         <div class="container">
           <a
@@ -124,6 +128,22 @@
               </div>
             </div>
           </a>
+
+          <!-- Interactions -->
+          <div class="blog-interactions mt-3">
+            <button
+              class="like-btn"
+              onclick="handleLike('blog1')"
+              id="like-blog1"
+            >
+              <i class="fas fa-heart"></i>
+              <span id="like-count-blog1">0</span>
+            </button>
+            <span class="comment-btn ms-3" onclick="showCommentModal('blog1')">
+              <i class="fas fa-comment"></i>
+              <span id="comment-count-blog1">0</span>
+            </span>
+          </div>
         </div>
       </section>
 
@@ -131,7 +151,7 @@
       <section class="regular-blogs py-5">
         <div class="container">
           <div class="row">
-            <!-- Blog 1 -->
+            <!-- Blog 2 -->
             <div class="col-md-4 mb-4">
               <a
                 href="https://blog.langchain.dev/planning-for-agents/"
@@ -166,9 +186,28 @@
                   </div>
                 </div>
               </a>
+
+              <!-- Interactions -->
+              <div class="blog-interactions mt-3">
+                <button
+                  class="like-btn"
+                  onclick="handleLike('blog2')"
+                  id="like-blog2"
+                >
+                  <i class="fas fa-heart"></i>
+                  <span id="like-count-blog2">0</span>
+                </button>
+                <span
+                  class="comment-btn ms-3"
+                  onclick="showCommentModal('blog2')"
+                >
+                  <i class="fas fa-comment"></i>
+                  <span id="comment-count-blog2">0</span>
+                </span>
+              </div>
             </div>
 
-            <!-- Blog 2 -->
+            <!-- Blog 3 -->
             <div class="col-md-4 mb-4">
               <a
                 href="https://blog.langchain.dev/ux-for-agents-part-2-ambient/"
@@ -201,9 +240,28 @@
                   </div>
                 </div>
               </a>
+
+              <!-- Interactions -->
+              <div class="blog-interactions mt-3">
+                <button
+                  class="like-btn"
+                  onclick="handleLike('blog3')"
+                  id="like-blog3"
+                >
+                  <i class="fas fa-heart"></i>
+                  <span id="like-count-blog3">0</span>
+                </button>
+                <span
+                  class="comment-btn ms-3"
+                  onclick="showCommentModal('blog3')"
+                >
+                  <i class="fas fa-comment"></i>
+                  <span id="comment-count-blog3">0</span>
+                </span>
+              </div>
             </div>
 
-            <!-- Blog 3 -->
+            <!-- Blog 4 -->
             <div class="col-md-4 mb-4">
               <a
                 href="https://keithwhor.medium.com/using-graph-theory-to-build-a-simple-recommendation-engine-in-javascript-ec43394b35a3"
@@ -239,11 +297,32 @@
                   </div>
                 </div>
               </a>
+
+              <!-- Interactions -->
+              <div class="blog-interactions mt-3">
+                <button
+                  class="like-btn"
+                  onclick="handleLike('blog4')"
+                  id="like-blog4"
+                >
+                  <i class="fas fa-heart"></i>
+                  <span id="like-count-blog4">0</span>
+                </button>
+                <span
+                  class="comment-btn ms-3"
+                  onclick="showCommentModal('blog4')"
+                >
+                  <i class="fas fa-comment"></i>
+                  <span id="comment-count-blog4">0</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </div>
+
+    <!-- Hover menu for "Save for later" feature -->
 
     <!-- Footer -->
     <footer class="text-white py-5 mt-0">
@@ -256,6 +335,13 @@
         </p>
       </div>
     </footer>
+
+    <!-- Link to jquery via cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../main.js"></script>
 
     <!-- Bootstrap JS components -->
     <script
