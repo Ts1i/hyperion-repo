@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 // Changes the background color of the body to #fafafa once the page has loaded
 $(function () {
-  $("body").animate({ backgroundColor: "#fafafa" }, 2000);
+  $("body").animate({ backgroundColor: "lightgrey" }, 2000);
 });
 
 // Italicize hero section paragraph
@@ -14,11 +14,10 @@ $(function () {
 });
 
 // Add fade toggle to clicked elements
-// !!!Note: Test this by clicking on the paragraph text in the hero section.
 $(function () {
-  // Target only child elements that should fade
+  // Targets all elements
   $(
-    ".hero-content-wrapper p, .team-member img, .team-member .caption, .team-member .role, .content-wrapper p"
+    ".hero-content-wrapper p, .team-member, .food-image, .content-wrapper p, h1, h2, .center-content, .caption, .role, .dropdown-menu li"
   ).click(function (e) {
     // Please note: This will only works on these selections
     e.stopPropagation(); // Prevents event bubbling to parent
@@ -59,14 +58,18 @@ $(function () {
 $(function () {
   function animateElements() {
     $(".section")
-      .animate({ marginLeft: "100px" }, 1000)
-      .animate({ marginTop: "50px" }, 1000)
-      .animate({ marginLeft: "-100px" }, 1000)
-      .animate({ marginTop: "-50px" }, 1000)
-      .animate({ marginLeft: "0px", marginTop: "0px" }, 1000, function () {
-        // Callback to create infinite loop
-        animateElements();
-      });
+      .animate({ marginLeft: "100px", backgroundColor: "#ffebee" }, 1000)
+      .animate({ marginTop: "50px", backgroundColor: "#e3f2fd" }, 1000)
+      .animate({ marginLeft: "-100px", backgroundColor: "#f3e5f5" }, 1000)
+      .animate({ marginTop: "-50px", backgroundColor: "#e8f5e9" }, 1000)
+      .animate(
+        { marginLeft: "0px", marginTop: "0px", backgroundColor: "#fff" },
+        1000,
+        function () {
+          // Callback to create infinite loop
+          animateElements();
+        }
+      );
   }
 
   // Add button to start/stop animations
