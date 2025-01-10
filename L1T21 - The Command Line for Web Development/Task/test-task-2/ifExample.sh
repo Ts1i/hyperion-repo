@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Shell script for Task 2
 
 # Checks whether the folder "newFolder" exists, and if it does not, it creates the folder "ifFolder".
