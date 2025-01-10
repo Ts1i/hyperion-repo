@@ -1,0 +1,83 @@
+/* Fonts */
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Header section */
+.hero-section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.profile-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .hero-section {
+        padding: 2rem 0;
+    }
+}
+
+.section-spacing {
+  padding: 5rem 0;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-list li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-item,
+.work-item {
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+  border-left: 3px solid #3579F7;
+}
+
+.work-item h3,
+.education-item h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  font-weight: 500;
+  color: #3579F7;
+  margin-bottom: 0.5rem;
+}
+
+.text-muted {
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
