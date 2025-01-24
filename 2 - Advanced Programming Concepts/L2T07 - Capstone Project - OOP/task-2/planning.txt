@@ -1,0 +1,126 @@
+1. Directory structure:
+
+    fooddelivery/
+    ├── src/
+    │   ├── main/
+    │   │   ├── Customer.java
+    │   │   ├── Restaurant.java
+    │   │   ├── Order.java
+    │   │   ├── Invoice.java
+    │   │   ├── Driver.java
+    │   │   └── DeliverySystem.java
+    │   ├── data/
+    │   │   └── drivers.txt
+    │   └── output/
+    │       └── [order_uid].txt
+
+2. Class structure:
+
+    // filepath: src/main/Customer.java
+        class Customer {
+            private String name;
+            private String contactNumber;
+            private String address;
+            private String location;
+            private String email;
+            
+            // Constructor
+            // Getters/Setters
+            // toString method
+        }
+
+    // filepath: src/main/Restaurant.java
+        class Restaurant {
+            private String name;
+            private String location;
+            private String contactNumber;
+            private HashMap<String, Double> menu;
+            
+            // Constructor
+            // Methods for menu management
+            // Location validator
+            // toString method
+        }
+
+    // filepath: src/main/Order.java
+        class Order {
+            private String uid;
+            private Customer customer;
+            private Restaurant restaurant;
+            private HashMap<String, Integer> orderItems;
+            
+            // Constructor
+            // Generate UID
+            // Add/remove items
+            // Validate location match
+            // toString method
+        }
+
+    // filepath: src/main/Invoice.java
+        class Invoice {
+            private Order order;
+            private double totalAmount;
+            private LocalDateTime timestamp;
+            
+            // Constructor
+            // Calculate total
+            // Generate formatted invoice
+            // toString method
+        }
+
+    // filepath: src/main/Driver.java
+        class Driver {
+            private String name;
+            private String location;
+            private int currentLoad;
+            
+            // Constructor
+            // Load capacity check
+            // Location matcher
+            // toString method
+        }
+
+    // filepath: src/main/DeliverySystem.java
+        class DeliverySystem {
+            private List<Driver> drivers;
+            
+            // Main system logic
+            // File operations
+            // Order processing
+            // Driver assignment
+            // Invoice generation
+        }
+
+3. Method psuedocode
+
+    MAIN SYSTEM FLOW:
+        1. Initialize system
+        2. Load drivers from file
+        3. Get customer details
+        4. Get restaurant details
+        5. Create order
+        6. Find available driver
+        7. Generate invoice
+        8. Write result to file
+
+    CREATE_ORDER:
+        1. Generate random UID
+        2. Get customer selection from restaurant menu
+        3. Validate locations match
+        4. Return order object
+
+    FIND_DRIVER:
+        1. Loop through available drivers
+        2. Check location match
+        3. Check current load
+        4. Return suitable driver or null
+
+    GENERATE_INVOICE:
+        1. Calculate total from order items
+        2. Format invoice with all details
+        3. Return invoice object
+
+    FILE_OPERATIONS:
+        1. Read drivers from txt file
+        2. Write success/failure to UID-named file
+        3. Include invoice in success case

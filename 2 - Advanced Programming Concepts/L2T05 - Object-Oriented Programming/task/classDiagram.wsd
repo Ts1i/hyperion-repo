@@ -1,0 +1,28 @@
+@startuml classDiagram
+class Pets {
+    +main(String[]): void
+}
+
+class Dog {
+    -name: String
+    -age: int
+    -breed: String
+    -color: String
+    -pottyTrained: boolean
+    +Dog(name: String, age: int, breed: String, color: String, pottyTrained: boolean)
+    +toAString(): String
+}
+
+class Cat {
+    -name: String
+    -color: String
+    -eyeColor: String
+    -pottyTrained: boolean
+    -isAffectionate: boolean
+    +Cat(name: String, color: String, eyeColor: String, pottyTrained: boolean, isAffectionate: boolean)
+    +toAString(): String
+}
+
+Pets --> Dog
+Pets --> Cat
+@enduml
