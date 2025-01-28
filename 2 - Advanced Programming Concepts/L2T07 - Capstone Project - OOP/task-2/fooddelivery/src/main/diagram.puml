@@ -1,0 +1,97 @@
+@startuml diagram
+
+class Customer {
+  -name: String
+  -contactNumber: String
+  -address: String
+  -location: String
+  -email: String
+  +Customer(name: String, contactNumber: String, address: String, location: String, email: String)
+  +getLocation(): String
+  +getName(): String
+  +getContactNumber(): String
+  +getAddress(): String
+  +getEmail(): String
+  +toString(): String
+}
+
+class Restaurant {
+  -name: String
+  -location: String
+  -contactNumber: String
+  -menu: HashMap<String, Double>
+  +Restaurant(name: String, location: String, contactNumber: String)
+  +addMenuItem(item: String, price: double): void
+  +getItemPrice(item: String): double
+  +getLocation(): String
+  +getName(): String
+  +getContactNumber(): String
+  +getMenu(): HashMap<String, Double>
+  +toString(): String
+}
+
+class Order {
+  -uid: String
+  -customer: Customer
+  -restaurant: Restaurant
+  -orderItems: HashMap<String, Integer>
+  -specialInstructions: String
+  +Order(customer: Customer, restaurant: Restaurant)
+  +addItem(item: String, quantity: int): void
+  +isValidLocation(): boolean
+  +getUid(): String
+  +getCustomer(): Customer
+  +getRestaurant(): Restaurant
+  +getOrderItems(): HashMap<String, Integer>
+  +getSpecialInstructions(): String
+  +setSpecialInstructions(instructions: String): void
+}
+
+class Invoice {
+  -order: Order
+  -totalAmount: double
+  -timestamp: LocalDateTime
+  -driver: Driver
+  +Invoice(order: Order, driver: Driver)
+  -calculateTotal(): void
+  +toString(): String
+}
+
+class Driver {
+  -name: String
+  -location: String
+  -currentLoad: int
+  -MAX_LOAD: int
+  +Driver(name: String, location: String, currentLoad: int)
+  +canTakeOrder(): boolean
+  +matchesLocation(orderLocation: String): boolean
+  +getName(): String
+  +getLocation(): String
+  +getCurrentLoad(): int
+  +toString(): String
+}
+
+class DeliverySystem {
+  -drivers: List<Driver>
+  -restaurants: List<Restaurant>
+  -customers: List<Customer>
+  +DeliverySystem()
+  -loadDrivers(): void
+  -loadRestaurants(): void
+  -loadCustomers(): void
+  +findAvailableDriver(location: String): Driver
+  +isRestaurantValid(restaurant: Restaurant): boolean
+  +findCustomerByEmail(email: String): Customer
+  +isCustomerValid(customer: Customer): boolean
+  +processOrder(order: Order): void
+}
+
+DeliverySystem -- "*" Driver
+DeliverySystem -- "*" Restaurant
+DeliverySystem -- "*" Customer
+Order -- "1" Customer
+Order -- "1" Restaurant
+Invoice -- "1" Order
+Invoice -- "1" Driver
+
+@enduml
