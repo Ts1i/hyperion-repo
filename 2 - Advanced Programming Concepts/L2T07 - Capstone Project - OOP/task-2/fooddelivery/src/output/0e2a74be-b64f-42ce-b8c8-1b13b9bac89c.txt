@@ -1,0 +1,19 @@
+Success!
+Order number 0e2a74be-b64f-42ce-b8c8-1b13b9bac89c
+Customer: Tyler Matthews
+Email: tyler.matthews@gmail.com
+Phone number: 0821231234
+Location: Cape Town
+
+You have ordered the following from Aesop's Pizza in Cape Town:
+
+2 x Margherita Pizza (R65.00)
+4 x Pepperoni Pizza (R78.00)
+
+Total: R442.00
+
+Miranda Metcalfe is the nearest to the restaurant and so they will be delivering your order to you at:
+
+3 Crane Avenue
+
+If you need to contact the restaurant, their number is 021 555 1234.
