@@ -147,3 +147,8 @@ Chips and Cheese,45.00
 Chicken Strips,55.00
 Toasted Sandwich,35.00
 
+
+Potch Sushi,Potchefstroom,0821231234
+Salmon Maki x8,60.00
+California Rolls x4,100.00
+

@@ -11,3 +11,9 @@ Blessing Zulu,078 901 2345,43 Park Road,Durban,blessing.z@yahoo.com
 Tyler Matthews,0821231234,3 Crane Avenue,Cape Town,tyler.matthews@gmail.com
 Base Moet,0811231234,10 Road Street,Johannesburg,b.moet@gmail.com
 Thabs Motso,0811231234,10 Juba Street,Potchefstroom,t.mots@gmail.com
+Bongi Khumalo,0811231234,12 Bompas Road,Potchefstroom,b.khumz@gmail.com
+Kerry George,0811231234,12 Wasabi Street,Potchefstroom,kg@gmail.com
+Priscilla Mutugi,0811231234,14 Fila Avenue,Potchefstroom,pm@gmail.com
+Tshepo Zuma,0811231234,12 Mishiyane Street,Potchefstroom,tzuma@gmail.com
+Sizwe Dube,0811231234,15 Roam Road,Potchefstroom,sdubz@gmail.com
+Tommy Gunn,0811231234,10 Bullet Avenue,Potchefstroom,tgunn@gmail.com
