@@ -1,0 +1,19 @@
+Thabo Molefe,082 123 4567,45 Long Street,Cape Town,thabo.m@gmail.com
+Nomvula Dlamini,083 456 7890,12 Beach Road,Durban,nomvula.d@yahoo.com
+Pieter van Wyk,084 789 1234,78 Jan Smuts Avenue,Johannesburg,pieter.vw@gmail.com
+Lerato Khumalo,072 345 6789,23 Main Road,Port Elizabeth,lerato.k@outlook.com
+Hendrik Botha,076 891 2345,56 Church Street,Bloemfontein,hendrik.b@gmail.com
+Thembi Ndlovu,071 234 5678,89 Market Street,Witbank,thembi.n@yahoo.com
+Johan van der Merwe,082 567 8901,34 Kerk Street,Potchefstroom,johan.vdm@gmail.com
+Precious Nkosi,073 890 1234,67 Beach Drive,Springbok,precious.n@outlook.com
+Rethabile Mokoena,074 567 8901,90 Hill Street,Cape Town,rethabile.m@gmail.com
+Blessing Zulu,078 901 2345,43 Park Road,Durban,blessing.z@yahoo.com
+Tyler Matthews,0821231234,3 Crane Avenue,Cape Town,tyler.matthews@gmail.com
+Base Moet,0811231234,10 Road Street,Johannesburg,b.moet@gmail.com
+Thabs Motso,0811231234,10 Juba Street,Potchefstroom,t.mots@gmail.com
+Bongi Khumalo,0811231234,12 Bompas Road,Potchefstroom,b.khumz@gmail.com
+Kerry George,0811231234,12 Wasabi Street,Potchefstroom,kg@gmail.com
+Priscilla Mutugi,0811231234,14 Fila Avenue,Potchefstroom,pm@gmail.com
+Tshepo Zuma,0811231234,12 Mishiyane Street,Potchefstroom,tzuma@gmail.com
+Sizwe Dube,0811231234,15 Roam Road,Potchefstroom,sdubz@gmail.com
+Tommy Gunn,0811231234,10 Bullet Avenue,Potchefstroom,tgunn@gmail.com

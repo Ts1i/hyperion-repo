@@ -1,0 +1,18 @@
+Success!
+Order number 5c8dc082-782a-4646-8c2e-29ab312577e2
+Customer: Tommy Gunn
+Email: tgunn@gmail.com
+Phone number: 0811231234
+Location: Potchefstroom
+
+You have ordered the following from Potch Café in Potchefstroom:
+
+2 x Breakfast Special (R75.00)
+
+Total: R150.00
+
+Jaidan Spencer is the nearest to the restaurant and so they will be delivering your order to you at:
+
+10 Bullet Avenue
+
+If you need to contact the restaurant, their number is 018 298 7654.
