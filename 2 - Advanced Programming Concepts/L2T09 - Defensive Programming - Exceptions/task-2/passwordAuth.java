@@ -8,12 +8,23 @@ import java.util.Scanner;
 public class passwordAuth {
 
   private static final int MIN_LENGTH = 8;
-  private static final int MAX_LENGTH = 30;
+  private static final int MAX_LENGTH = 40;
 
     // Check whether the user has entered a password that contains a number
     private static boolean containsNumber(String password) {
       for (char c : password.toCharArray()) {
         if (Character.isDigit(c)) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    // Checks whether the password contains a special character
+    private static boolean containsSpecialCharacter(String password) {
+      String specialChars = "!@#$%^&*(),.?\":{}|<>";
+      for (char c : password.toCharArray()) {
+        if (specialChars.contains(String.valueOf(c))) {
           return true;
         }
       }
@@ -42,6 +53,11 @@ public class passwordAuth {
       // Check if password contains a number
       if (!containsNumber(password)) {
         throw new IllegalArgumentException("Password must contain at least one number");
+      }
+
+      // Check if password contains a special character
+      if (!containsSpecialCharacter(password)) {
+        throw new IllegalArgumentException("Password must contain at least one special character (!@#$%^&*(),.?\":{}|<>)");
       }
 
       return true;
@@ -78,8 +94,8 @@ public class passwordAuth {
         // Keep asking the user to enter a password until they enter a password that contains a number.
         while (true) {
           try{
-            System.out.print("Enter a password. Must that contains at least one number, minimum length "
-             + MIN_LENGTH + " chars, maximum length " + MAX_LENGTH + " chars: ");
+            System.out.print("Enter a password. Must contain at least one number and special character, minimum length "
+              + MIN_LENGTH + " chars, maximum length " + MAX_LENGTH + " chars: ");
             String password = scanner.nextLine().trim();
 
             // Validate password
