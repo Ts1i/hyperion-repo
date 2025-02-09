@@ -25,6 +25,10 @@ public class DeliverySystem {
       .orElse(null);
   }
 
+  public DataStore getDataStore() {
+    return dataStore;
+  }
+
   // ----------------------------------Processing----------------------------------
 
   // Process the order, with the order class as the input

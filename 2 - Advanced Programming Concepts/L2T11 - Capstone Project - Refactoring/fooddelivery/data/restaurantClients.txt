@@ -152,3 +152,9 @@ Potch Sushi,Potchefstroom,0821231234
 Salmon Maki x8,60.00
 California Rolls x4,100.00
 
+
+Simply Asia,Witbank,0811231234
+Chicken Chow Mein,80.00
+Egg Fried Rice,50.00
+Beef Chow Mein,90.00
+

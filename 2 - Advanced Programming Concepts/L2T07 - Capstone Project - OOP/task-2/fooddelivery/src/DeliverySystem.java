@@ -8,9 +8,12 @@ public class DeliverySystem {
   private List<Customer> customers;
 
   public DeliverySystem() {
+    // Initialize lists
     drivers = new ArrayList<>();
     restaurants = new ArrayList<>();
     customers = new ArrayList<>();
+    
+    
     loadDrivers();
     loadRestaurants();
     loadCustomers();

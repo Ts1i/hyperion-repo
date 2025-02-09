@@ -9,6 +9,7 @@ public class CustomerManager {
   public CustomerManager(DeliverySystem system, Scanner scanner) {
     this.system = system;
     this.scanner = scanner;
+    this.dataStore = system.getDataStore();
   }
 
   // Get customer details from the user

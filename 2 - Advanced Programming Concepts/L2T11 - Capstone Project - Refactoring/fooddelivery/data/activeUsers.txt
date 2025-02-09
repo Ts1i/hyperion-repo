@@ -17,3 +17,6 @@ Priscilla Mutugi,0811231234,14 Fila Avenue,Potchefstroom,pm@gmail.com
 Tshepo Zuma,0811231234,12 Mishiyane Street,Potchefstroom,tzuma@gmail.com
 Sizwe Dube,0811231234,15 Roam Road,Potchefstroom,sdubz@gmail.com
 Tommy Gunn,0811231234,10 Bullet Avenue,Potchefstroom,tgunn@gmail.com
+McLovin Smith,0811231234,12 love Crescent,Springbok,mclove@gmail.com
+Ree Factor,0811231234,10 Ree Street,Springbok,ree.factor@gmail.com
+Un Do,0811231234,10 Undo Street,Witbank,undo@gmail.com

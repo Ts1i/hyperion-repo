@@ -8,6 +8,12 @@ public class DataStore {
   private List<Customer> customers;
 
   public DataStore() {
+    // Initialize lists
+    drivers = new ArrayList<>();
+    restaurants = new ArrayList<>();
+    customers = new ArrayList<>();
+
+    // Load data from files
     loadDrivers();
     loadRestaurants();
     loadCustomers();

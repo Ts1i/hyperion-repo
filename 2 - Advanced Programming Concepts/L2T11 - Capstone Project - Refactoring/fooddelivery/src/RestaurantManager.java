@@ -11,6 +11,7 @@ public class RestaurantManager {
   public RestaurantManager(DeliverySystem system, Scanner scanner) {
     this.system = system;
     this.scanner = scanner;
+    this.dataStore = system.getDataStore();
   }
 
   // Display the list of restaurants dependent on the customer's location
