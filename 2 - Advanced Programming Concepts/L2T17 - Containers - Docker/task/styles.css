@@ -1,0 +1,559 @@
+/* ------FONTS------ */
+/* Import Manrope font from Google Fonts if needed */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+
+/* Global font settings */
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+/* Typography styles */
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Hero images */
+.hero-image {
+  position: absolute;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-images-container {
+  position: relative;
+  min-height: 400px;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.hero-image.light-bulb {
+  max-width: 250px;
+  top: 0;
+  left: 10%;
+  z-index: 2;
+}
+
+.hero-image.pub {
+  max-width: 300px;
+  top: 50px;
+  left: 40%;
+  z-index: 1;
+}
+
+.hero-image.chat {
+  max-width: 200px;
+  top: 200px;
+  left: 60%;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .hero-images-container {
+    min-height: 300px;
+    margin: 1rem 0;
+  }
+
+  .hero-image {
+    position: absolute;
+    display: block;
+    margin: 1rem auto;
+    /* max-width: 80% !important; */
+    /* position: static; */
+  }
+
+  .hero-image.light-bulb {
+    top: 0;
+    left: 20%;
+  }
+
+  .hero-image.pub {
+    top: 50%;
+    left: 0;
+  }
+
+  .hero-image.chat {
+    top: 70%;
+    left: 40%;
+  }
+}
+
+/* Sections */
+.section-spacing {
+  margin-bottom: 2rem;
+}
+
+/* Other images */
+.image {
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Quote section */
+.quote {
+  position: relative;
+  background-image: url("page-1-landing/assets/network.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  padding: 4rem 2rem;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.719);
+  z-index: 1;
+}
+
+.quote-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.quote-content p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.quote-content p:last-child {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+/* Quote section responsiveness for mobile */
+@media (max-width: 768px) {
+  .quote {
+    padding: 2rem 1rem;
+  }
+
+  .quote p {
+    font-size: 14px;
+  }
+}
+
+/* How might we build this section */
+.build-section {
+  padding: 4rem 0;
+}
+
+.build-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.build-table td {
+  padding: 1rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.build-table tr:last-child td {
+  border-bottom: none;
+}
+
+.left-heading {
+  max-width: 400px;
+}
+
+/* Step one: Design & Build a Social Network section */
+.card {
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 20px;
+}
+
+.card-number {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.code-snippet {
+  background-color: #2a3137;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+}
+
+.code-snippet code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.code-snippet::-webkit-scrollbar {
+  width: 0;
+  height: 8px;
+  transition: all 0.3s ease;
+}
+
+.code-snippet:hover {
+  overflow-x: auto;
+}
+
+.code-snippet:hover::-webkit-scrollbar {
+  width: 8px;
+  opacity: 1;
+}
+
+.code-snippet::-webkit-scrollbar-thumb {
+  background-color: #7f56d9;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.code-snippet::-webkit-scrollbar-thumb:hover {
+  background-color: #7f56d9;
+}
+
+/* Sources */
+.source-text {
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Coming soon section */
+.coming-soon {
+  background-color: #7f56d9;
+  padding: 4rem 0;
+  border-radius: 20px 20px 0px 0px;
+}
+
+footer {
+  background-color: #2a3137;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Stylings for blog page start here */
+.secondary-bg {
+  background-color: #7f56d9;
+}
+
+/* Blog styles */
+.blog-image {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.featured-image {
+  height: 400px;
+}
+
+.blog-image:not(.featured-image) {
+  height: 200px;
+}
+
+.featured-blog .blog-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.featured-blog .blog-excerpt {
+  font-size: 1.2rem;
+}
+
+.featured-blog .blog-meta {
+  font-size: 1.1rem;
+}
+
+.regular-blogs .blog-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.regular-blogs .blog-excerpt {
+  font-size: 1rem;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .featured-image {
+    height: 250px;
+  }
+
+  .featured-blog .blog-title {
+    font-size: 2rem;
+  }
+
+  .featured-blog .blog-excerpt {
+    font-size: 1rem;
+  }
+}
+
+/* Blog links */
+.blog-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.blog-link:hover {
+  color: inherit;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Contact form */
+.custom-input {
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+  background-color: white;
+  padding: 12px 20px;
+}
+
+.custom-button {
+  background-color: #7f56d9;
+  color: white;
+  border-radius: 20px;
+  padding: 12px 20px;
+  border: none;
+  transition: opacity 0.3s ease;
+}
+
+.custom-button:hover {
+  opacity: 0.9;
+  background-color: #7f56d9e7;
+  color: white;
+}
+
+.form-check-input {
+  border-radius: 4px;
+  border: 1px solid #7f56d9;
+}
+
+.form-check-input:checked {
+  background-color: #7f56d9;
+  border-color: #7f56d9;
+}
+
+textarea.custom-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Page loading */
+body {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+/* Blog interactions */
+.blog-interactions {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.like-btn {
+  display: inline-block;
+  color: #666;
+  text-decoration: none;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.like-btn:hover {
+  color: #7f56d9;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.like-btn.liked {
+  color: #7f56d9;
+}
+
+.fa-heart,
+.fa-comment {
+  margin-right: 0.5rem;
+}
+
+/* Comments */
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-open > *:not(.comment-modal) {
+  filter: blur(5px);
+}
+
+.comment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.comments-container {
+  margin: 1rem 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.comment {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+#comment-input {
+  width: 100%;
+  min-height: 100px;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.submit-comment {
+  background: #7f56d9;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.comment-btn {
+  display: inline-block;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateZ(0);
+  text-decoration: none;
+  padding: 0;
+}
+
+.comment-btn:hover {
+  color: #7f56d9;
+  transform: translateY(-5px);
+}
+
+.comment-btn i {
+  margin-right: 0.5rem;
+}
+
+.comment-btn span {
+  font-size: 0.9rem;
+}
+
+/* Blog cards */
+.blog-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Save for later functionality */
+.save-menu {
+  position: absolute;
+  top: 0;
+  right: -200px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  transition: right 0.3s ease;
+  border-radius: 0 0 0 10px;
+}
+
+.blog-card:hover .save-menu {
+  right: 0;
+}
+
+.save-option {
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.save-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.remove-saved {
+  width: 100%;
+  text-align: left;
+  padding: 0;
+}

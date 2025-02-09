@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character encoding and responsive viewport  -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Linked stylesheet -->
+    <link rel="stylesheet" href="../styles.css" type="text/css" />
+
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/a17a9d32c5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>scifiPub</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark secondary-bg px-5">
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="../index.html">scifiPub</a>
+
+        <!-- Hamburger menu for mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../page-2-blog/index.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Contact me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../page-4-saveforlater/index.html"
+                >Save for later</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Heading section -->
+    <section class="secondary-bg">
+      <div class="container">
+        <div class="py-5">
+          <h1 class="text-center mt-5 text-white">Contact me</h1>
+          <p class="text-center mb-5 text-white-50">
+            Drop me a line if you would like to have a conversation about any of
+            the ideas presented here.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extra div z-indexed image -->
+    <div class="secondary-bg py-2"></div>
+
+    <!-- Main body -->
+    <div class="container">
+      <!-- Contact form -->
+      <section class="section-spacing">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form class="signup-form p-4">
+              <!-- First Name -->
+              <div class="mb-4">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control custom-input"
+                  id="firstName"
+                  required
+                />
+              </div>
+
+              <!-- Last Name -->
+              <div class="mb-4">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control custom-input"
+                  id="lastName"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="mb-4">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control custom-input"
+                  id="email"
+                  required
+                />
+              </div>
+
+              <!-- Message -->
+              <div class="mb-4">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control custom-input"
+                  id="message"
+                  rows="5"
+                  placeholder="Type your message here..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Privacy Policy -->
+              <div class="mb-4 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="privacyPolicy"
+                  required
+                />
+                <label class="form-check-label" for="privacyPolicy">
+                  You agree to our very demure, very mindful
+                  <a
+                    href="https://privacy-policy.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Privacy Policy</a
+                  >
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="btn custom-button w-100"
+                onclick="sendEmail(event)"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white py-5 mt-0">
+      <div class="container mt-0">
+        <p class="mb-0 text-center text-md-start footer-text">
+          No shoes for this footer. I am barefoot ❤️
+        </p>
+        <p class="text-center text-md-start text-white-50 footer-text">
+          &copy; 2025 scifiPub. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Link to jquery via cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../main.js"></script>
+
+    <!-- Bootstrap JS components -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

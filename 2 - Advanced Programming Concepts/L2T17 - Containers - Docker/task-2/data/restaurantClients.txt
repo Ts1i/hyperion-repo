@@ -1,0 +1,160 @@
+Aesop's Pizza,Cape Town,021 555 1234
+Pepperoni Pizza,78.00
+Hawaiian Pizza,82.00
+Margherita Pizza,65.00
+Four Seasons Pizza,95.00
+
+Durban Curry House,Durban,031 444 5678
+Chicken Curry,85.00
+Lamb Curry,120.00
+Butter Chicken,95.00
+Prawn Curry,140.00
+
+Jo'burg Grill,Johannesburg,011 789 4561
+T-Bone Steak,180.00
+Grilled Chicken,120.00
+Lamb Chops,160.00
+Boerewors Roll,45.00
+
+Port Elizabeth Seafood,Port Elizabeth,041 333 9876
+Seafood Platter,220.00
+Fish and Chips,85.00
+Calamari,95.00
+Grilled Hake,75.00
+
+Bloem Kitchen,Bloemfontein,051 777 8529
+Pap and Wors,65.00
+Vetkoek and Mince,45.00
+Malva Pudding,35.00
+Milk Tart,30.00
+
+Hunger Stop,Johannesburg,0811231234
+B52 Bomber Burger,120.00
+Peppadew Burger,108.00
+Loaded Fries,50.00
+
+Cape Malay Kitchen,Cape Town,021 424 5678
+Bobotie,115.00
+Yellow Rice,35.00
+Samoosas (6),45.00
+Koeksusters,25.00
+
+Durban Spice House,Durban,031 567 8901
+Bunny Chow,85.00
+Biryani,95.00
+Butter Chicken,110.00
+Roti (2),20.00
+
+Potch Steakhouse,Potchefstroom,018 297 4567
+T-Bone Steak,195.00
+Rump 300g,165.00
+Pork Ribs,180.00
+Chicken Wings,85.00
+
+Springbok Game Lodge,Springbok,027 712 3456
+Kudu Steak,210.00
+Springbok Pie,145.00
+Game Potjie,175.00
+Ostrich Fillet,185.00
+
+Witbank Grill House,Witbank,013 656 7890
+Mixed Grill Platter,225.00
+Eisbein,165.00
+Chicken Schnitzel,95.00
+Beef Burger,85.00
+
+PE Ocean Basket,Port Elizabeth,041 367 8901
+Line Fish,145.00
+Prawns (12),220.00
+Sushi Platter,195.00
+Fish Curry,135.00
+
+Bloem Traditional,Bloemfontein,051 447 8901
+Pap en Vleis,85.00
+Samp and Beans,65.00
+Oxtail Stew,155.00
+Malva Pudding,45.00
+
+Jozi Street Food,Johannesburg,011 789 1234
+Kota,45.00
+Chakalaka Roll,35.00
+Amagwinya (4),25.00
+Beef Stew,75.00
+
+Cape Vineyards,Cape Town,021 876 5432
+Seafood Pasta,145.00
+Greek Salad,85.00
+Wine Platter,235.00
+Cheese Board,175.00
+
+Durban Bay Café,Durban,031 345 6789
+Prawn Curry,165.00
+Crab Curry,185.00
+Fish Masala,125.00
+Mutton Curry,145.00
+
+Potch Café,Potchefstroom,018 298 7654
+Breakfast Special,75.00
+Club Sandwich,85.00
+Chicken Salad,95.00
+Milkshake,35.00
+
+Karoo Kitchen,Springbok,027 718 9012
+Lamb Shanks,195.00
+Karoo Lamb Chops,185.00
+Venison Pie,145.00
+Milk Tart,40.00
+
+Coal City Diner,Witbank,013 697 8901
+Mixed Grills,165.00
+Pap and Wors,85.00
+Chicken Wrap,75.00
+Beef Stir Fry,95.00
+
+Algoa Bay Bistro,Port Elizabeth,041 345 6789
+Seafood Curry,155.00
+Fish Tacos,95.00
+Calamari Rings,85.00
+Mussels,125.00
+
+Free State Feast,Bloemfontein,051 789 0123
+Boerewors Roll,55.00
+Vetkoek Platter,45.00
+Beef Potjie,135.00
+Koeksister,20.00
+
+Gold Reef Diner,Johannesburg,011 234 5678
+Peri Peri Chicken,115.00
+Beef Ribs,175.00
+Township Burger,85.00
+Chakalaka Wings,95.00
+
+Cape Point Restaurant,Cape Town,021 345 6789
+Seafood Platter,245.00
+Line Fish,165.00
+Oysters (6),145.00
+Grilled Calamari,125.00
+
+Durban Beachfront,Durban,031 901 2345
+Prawn Platter,235.00
+Fish Curry,145.00
+Crab Curry,185.00
+Roti Roll,45.00
+
+Potch Student Café,Potchefstroom,018 765 4321
+Student Burger,65.00
+Chips and Cheese,45.00
+Chicken Strips,55.00
+Toasted Sandwich,35.00
+
+
+Potch Sushi,Potchefstroom,0821231234
+Salmon Maki x8,60.00
+California Rolls x4,100.00
+
+
+Simply Asia,Witbank,0811231234
+Chicken Chow Mein,80.00
+Egg Fried Rice,50.00
+Beef Chow Mein,90.00
+

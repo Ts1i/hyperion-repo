@@ -1,0 +1,18 @@
+Success!
+Order number 5c4a3630-6d5d-49a9-8c12-015e115decfa
+Customer: Ree Factor
+Email: ree.factor@gmail.com
+Phone number: 0811231234
+Location: Springbok
+
+You have ordered the following from Karoo Kitchen in Springbok:
+
+2 x Lamb Shanks (R195.00)
+
+Total: R390.00
+
+Johan Hoffman is the nearest to the restaurant and so they will be delivering your order to you at:
+
+10 Ree Street
+
+If you need to contact the restaurant, their number is 027 718 9012.
