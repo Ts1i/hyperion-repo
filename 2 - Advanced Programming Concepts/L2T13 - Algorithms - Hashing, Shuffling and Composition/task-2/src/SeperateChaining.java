@@ -21,7 +21,7 @@ public class SeperateChaining {
 
   // Hash function to determine index
   private int hash(String key) {
-    return Math.abs(key.hashCode() % hashTable.length);
+    return Integer.parseInt(key) % hashTable.length;
   }
 
   // Inserts a value into the hash table using separate chaining
@@ -61,7 +61,7 @@ public class SeperateChaining {
   }
 
   public static void main(String[] args) {
-    SeperateChaining table = new SeperateChaining(10);
+    SeperateChaining table = new SeperateChaining(9);
     
     // Manual insertions as per task requirements
     table.insert("55");

@@ -1,14 +1,21 @@
+import java.util.ArrayList;
 
 public class PriorityQueue {
 
   private String[] elements;
   private int size;
-  private static final int INITIAL_CAPACITY = 10;
+  private static final int DEFAULT_CAPACITY = 10;
 
-  public PriorityQueue() {
-    elements = new String[INITIAL_CAPACITY];
+  public PriorityQueue(ArrayList<String> list) {
+    // Manual conversion from ArrayList to array
+    elements = new String[DEFAULT_CAPACITY];
     size = 0;
-  }
+    
+    // Manual iteration through ArrayList
+    for (String item : list) {
+      offer(item);
+    }
+}
 
   // OFFER: Add element to queue and maintain priority order. 
   // The next element added will be placed in the next available position in the array as size is incremented upwards with "size++".
@@ -69,20 +76,27 @@ public class PriorityQueue {
 
   // Test the implementation
   public static void main(String[] args) {
-    PriorityQueue queue = new PriorityQueue();
+    // Test 1: Initialize with ArrayList
+    ArrayList<String> list = new ArrayList<>();
+    list.add("Chris");
+    list.add("Andile");
+    PriorityQueue queue = new PriorityQueue(list);
+    System.out.println("Initial queue size: " + queue.size());  // Should print 2
 
-    // Add elements
-    queue.offer("Chris");
-    queue.offer("Andile");
+    // Test 2: Test offer method
     queue.offer("Bucie");
+    System.out.println("Size after offer: " + queue.size());  // Should print 3
 
-    System.out.println("Queue size: " + queue.size());  // Should print the full queue size of 3 
-
-    // Remove elements (should come out in alphabetical order)
+    // Test 3: Test ordering after offer
+    System.out.println("\nRemoving elements to verify order:");
     System.out.println(queue.remove());  // Should print "Andile"
     System.out.println(queue.remove());  // Should print "Bucie"
     System.out.println(queue.remove());  // Should print "Chris"
 
-    System.out.println("Queue size: " + queue.size());  // Should print the empty queue size of 0
+    // Test 4: Test offer with resizing
+    for (int i = 0; i < 11; i++) {  // Exceed DEFAULT_CAPACITY
+      queue.offer("Test" + i);
+    }
+    System.out.println("\nSize after multiple offers: " + queue.size());  // Should print 11
   }
 }
