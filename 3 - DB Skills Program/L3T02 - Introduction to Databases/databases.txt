@@ -1,0 +1,67 @@
+16-002 Introduction to Databases
+
+1. Explain the difference between data and information
+  Data refers to raw, unprocessed characters or values (e.g., a BSON-encoded string like {"name": "John"}). 
+  Information is data contextualized into a meaningful format, 
+  such as a MongoDB document presented as a JSON-like object with labeled fields like name: "John"
+
+2. Define each of the following terms in your own words:
+  a) 
+    Data: Raw system/user-generated output (e.g., unstructured BSON bytes)
+  b) 
+    Field: A labeled data element (e.g., "Tshwanelo" tagged as "Name" in a MongoDB document)
+  c) 
+    Record: A group of fields forming a coherent entity (e.g., a MongoDB document containing name, age, and address fields)
+  d) 
+    File: A collection of records (e.g., a MongoDB collection storing user documents)
+
+3. DBMS provides a solution to a variety of issues in storing and managing data. Outline these issues, indicating how they are addressed by DBMS's.
+  - Storage space: 
+  Numerous paper-based records can take up a lot of space, and depending on where a company is situated, office space can be incredibly expensive. DBMS can store more records per unit of physical space than physical records.
+  - Difficulty to access:
+  DBMS allows data to be shared and accessed across multiple applications. A query is a specific request for data manipulation sent to the DMBS.
+  The DBMS makes it possible to retrieve information and get quick answers in a moment's notice.
+  - Backup and secure:
+  Physical records are inherently singular and it takes effort to reproduce or copy for the purposes of backup. Singular physical records are also vulnerable to loss of data,
+  for example, the infamous fire at Metrofile that destroyed many physical records stored by South Africa's banks. An effective DMBS can store multiple copies in different regions, for example, AWS S3.
+  - Inability to analyse at scale: 
+  Physical data storage can hold various contradictory records in different places. A DBMS significantly reduces the probability of incoherent data,
+  even if this is queried by multiple users at once.
+  - Consolidation
+  How does one ensure that phyical records are consolidated to present a single view to the person querying the records?
+  Without a DBMS to integrates many different user's views of the data into a single data repository, this is not possible without processes and people to manage the records at a great expense (e.g. record keepers and librarians).
+
+4. What are the commonly implented features of commercial DBMS's?
+  Commercial DBMS's have many features. At the highest level, these features will enable the creation, retrieval, updating and deletion of data.
+  Feature examples are indexing (e.g., MongoDB’s compound indexes), ACID compliance, query languages (e.g., MongoDB’s MQL), replication, sharding, and security (SCRAM authentication).
+
+5. Research sparse data. What is it and when can it be found?
+  Datasets are sparse when they are characterized by multiple non-informative elements, e.g. zeros or nulls. 
+  These can be found in many real-world scenarios. For example, in user-item interaction matrices (e.g. for recommendations) many users interact with only a small number of items,
+  resulting in matrices with many zeros or null values. The complication in this example is that these users will still expect an intuitive experience, therefore this sparse
+  data must still be analysed.
+
+6. Explain the different types of DBMS's
+  - Centralised database: Supports data located at a single situated
+  - Distributed database: Supports data distributed across several different sites
+  - Operational database: Supports day-to-day operations, therefore, has efficient CRUD processes
+  - Analytical database: Supports analysis of historical data to support decision making. Comprises of a data warehouse and an online analytical processing front-end (OLAP)
+  - Relational database: Structured to recognise the relationships between stored items of information.
+  - noSQL database: Not based on the relational model, supports distributed architectures and sparse data.
+
+7. Research and list 3 noSQL DBMS's, reviewing their features:
+  - MongoDB: Document-oriented; features flexible schema, horizontal scaling via sharding, and real-time aggregation pipelines
+  - Cassandra: Masterless, distributed architecture; excels in write-heavy workloads with linear scalability and CQL for querying
+  - Redis: In-memory key-value store; Redis Enterprise offers infinite linear scalability, 99.999% availability, geo-distribution, and enterprise-grade support
+
+8. Look up ACID properties of databases. Describe these in your own words.
+  - Atomicity: Transactions succeed entirely or fail (e.g., MongoDB’s multi-document transactions)
+  - Consistency: Valid data states (e.g., Cassandra’s tunable consistency for writes/reads)
+  - Isolation: Concurrent transactions avoid conflicts (e.g., MongoDB’s document-level locking)
+  - Durability: Committed data survives failures (e.g., MongoDB’s write-ahead logging)
+
+9. Given the file below, answer the following questions:
+  a) How many records does the file contain?
+    4
+  b) How many fields are there per record?
+    5
