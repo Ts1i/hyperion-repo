@@ -2,10 +2,16 @@
 
 public class SortAndSearch {
 
+    // ## Question 1: Which searching algorithm would be appropriate to use on the given list?
+    // Answer: Linear Search & Binary search would be appropriate to use.
+    // Linear search has a time complexity of O(n), which is fine in the case of this small array.
+    // Binary search has a time complexity of O(log n), which is better than linear search. But, in the case of this small array, the difference is negligible.
+  
+    // ## Question 2: Why is linear search a good choice?
     // Linear Search works well for a one-time search on this small array.
-    // Best practice is to sort the array first before using Binary Search, which is not necessary in the case of this small array.
+    // Linear search also does not require the array to be sorted.
 
-    // Linear Search - best for one-time search
+    // Linear Search - best for one-time search on a small array
     public static int linearSearch(int[] arr, int target) {
       for (int i = 0; i < arr.length; i++) {
         if (arr[i] == target) {
@@ -15,7 +21,7 @@ public class SortAndSearch {
       return -1;  // If the element is not found
     }
 
-  // Insertion Sort
+  // ## Question 3: Insertion Sort
   public static void insertionSort(int[] arr) {
     int n = arr.length;
     for (int i = 1; i < n; i++) {
@@ -33,7 +39,7 @@ public class SortAndSearch {
     }
   }
 
-    // Binary Search - in the real world, this is great for multiple searches after sorting
+    // ## Question 4: Binary Search - in the real world, this is great for multiple searches after sorting
     public static int binarySearch(int[] arr, int target) {
       
       // Sort array

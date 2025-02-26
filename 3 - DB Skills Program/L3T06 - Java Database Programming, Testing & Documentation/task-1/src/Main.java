@@ -17,7 +17,7 @@ public class Main {
     String password = "swordfish";
     
     try {
-      // Create connection
+      // Create connection to mysql server
       Connection connection = DriverManager.getConnection(url, username, password);
       Statement statement = connection.createStatement();
       
@@ -29,6 +29,8 @@ public class Main {
       statement.executeUpdate("DROP TABLE IF EXISTS books");
       
       // Create table
+      // This table will store book information
+      // id: unique identifier for each book
       String createTableSQL = "CREATE TABLE IF NOT EXISTS books ("
         + "id INT PRIMARY KEY,"
         + "title VARCHAR(50),"
@@ -45,6 +47,7 @@ public class Main {
         "INSERT INTO books (id, title, author, qty) VALUES (1005, 'Advanced Java', 'Kelly Fields', 7)"
       };
       
+      // Execute insert statements to add data to the table
       for (String sql : insertSQL) {
         statement.executeUpdate(sql);
       }
@@ -63,6 +66,7 @@ public class Main {
         "INSERT INTO books (id, title, author, qty) VALUES (8002, 'Java XYZ', 'Kevin Jones', 5)"
       };
       
+      // Execute insert statements to add new books to the table
       for (String sql : newBooksSQL) {
         statement.executeUpdate(sql);
       }
