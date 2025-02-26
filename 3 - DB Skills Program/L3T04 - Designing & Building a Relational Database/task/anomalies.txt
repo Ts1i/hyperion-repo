@@ -1,0 +1,138 @@
+16-004 Designing and Building a Relational Database
+
+Question 1:
+
+  A database is an organized and structured collection of data, designed for efficient storage, retrieval, 
+  and management of information. It provides a systematic way to store and access data electronically.
+
+  To interact with and manage databases effectively, three fundamental types of database languages are employed => 
+  Data Definition Language (DDL), Data Manipulation Language (DML), and Query Languages. 
+  These languages serve distinct but complementary roles:
+
+  Data Definition Language (DDL):  DDL is used to define and manage the structure of the database itself, 
+  often referred to as the database schema. It encompasses commands to create, modify, and delete database objects such as tables, 
+  indexes, and users. DDL focuses on describing the data and its relationships, specifying data types, constraints, 
+  and the overall organization of the data.
+
+  Data Manipulation Language (DML): DML is used to manipulate and work with the data stored within the database. 
+  It provides commands to insert, update, delete, and retrieve data. DML allows users to interact with the data content, 
+  enabling them to populate the database, modify existing information, remove outdated records, and extract specific data 
+  sets for various purposes.
+
+  Query Languages: Query languages are specialized languages designed for requesting and retrieving specific information from the database. 
+  They allow users to ask questions of the data, perform searches, filtering, sorting, and computational operations to extract 
+  meaningful insights.  SQL (Structured Query Language) is the most widely adopted query language. 
+  Query languages empower users to explore the data, answer complex questions, and generate reports, 
+  facilitating data analysis and informed decision-making.
+
+Question 2:
+
+  For the diagram, refer to "16-004 Designing and Building a Relational Database - Question 2" in the task folder.
+
+  1. Primary Keys:
+    - INV_NUM and PROD_NUM together form a composite primary key for the table
+    - They jointly determine QUANT_SOLD (how many of each product was sold on an invoice)
+
+  2. Functional Dependencies (shown with solid arrows →):
+    - INV_NUM → SALE_DATE: Each invoice number determines the sale date
+    - PROD_NUM → PROD_LABEL: Each product number determines its label/description
+    - PROD_NUM → PROD_PRICE: Each product number determines its price
+    - PROD_NUM → VEND_CODE: Each product number determines its vendor code
+    - VEND_CODE → VEND_NAME: Each vendor code determines the vendor name
+
+  3. Partial Dependencies (shown with dashed arrows and "PD" label):
+    These are problematic because they depend on only part of the primary key:
+    - SALE_DATE depends only on INV_NUM (not the full primary key)
+    - PROD_LABEL depends only on PROD_NUM
+    - PROD_PRICE depends only on PROD_NUM
+    - VEND_CODE depends only on PROD_NUM
+
+  4. Transitive Dependencies (shown with dashed arrows and "TD" label):
+    These are problematic because they show indirect dependencies:
+    - VEND_NAME depends on PROD_NUM through VEND_CODE (PROD_NUM → VEND_CODE → VEND_NAME)
+    - VEND_NAME directly depends on VEND_CODE
+
+Question 3:
+
+  To normalize to 2NF, we need to remove all partial dependencies by creating separate tables. 
+
+  The following partial dependencies are observed:
+
+    - SALE_DATE depends only on INV_NUM
+    - PROD_LABEL, PROD_PRICE, and VEND_CODE depend only on PROD_NUM
+
+  We can create 3 tables:
+
+  Table 1 => INVOICE_ITEMS (Main transaction table)
+  - INV_NUM (Primary Key part 1)
+  - PROD_NUM (Primary Key part 2)
+  - QUANT_SOLD
+  Primary Key: (INV_NUM, PROD_NUM)
+
+  Table 2 => INVOICES (Invoice information)
+  - INV_NUM (Primary Key)
+  - SALE_DATE
+
+  Table 3 => PRODUCTS (Product information)
+  - PROD_NUM (Primary Key)
+  - PROD_LABEL
+  - PROD_PRICE
+  - VEND_CODE
+  - VEND_NAME
+
+  *See "16-004 Designing and Building a Relational Database - Question 3" for the diagram
+
+  **NEW ANOMALIES
+
+    1. Update Anomalies:
+      - If a product's price changes, we need to update it in the PRODUCTS table only once - this is actually an improvement from the original design
+      - If a vendor's name changes, we still have to update it for every product from that vendor in the PRODUCTS table - this is a new update anomaly
+
+    2. Insertion Anomalies:
+
+      - We can't store information about a new product until it appears in a transaction (INVOICE_ITEMS) - this is unchanged from before
+      - We can't store vendor information until we have a product from that vendor - this is a new insertion anomaly
+      - We can create an invoice without any items (in INVOICES table) which might be undesirable but could be controlled through business rules
+
+    3. Deletion Anomalies:
+
+      - If we delete all orders for a product, we lose all information about that product - this is unchanged
+      - If we delete all products from a vendor, we lose the vendor information - this is a new deletion anomaly
+
+Question 4:
+
+  The 3NF structure has four tables:
+
+  Table 1 => INVOICE_ITEMS (unchanged)
+    - INV_NUM (Primary Key part 1)
+    - PROD_NUM (Primary Key part 2)
+    - QUANT_SOLD
+    Primary Key: (INV_NUM, PROD_NUM)
+
+  Table 2 => INVOICES (unchanged)
+    - INV_NUM (Primary Key)
+    - SALE_DATE
+
+  Table 3 => PRODUCTS (modified)
+    - PROD_NUM (Primary Key)
+    - PROD_LABEL
+    - PROD_PRICE
+    - VEND_CODE (Foreign Key to VENDORS)
+
+  Table 4 => VENDORS (new)
+    - VEND_CODE (Primary Key)
+    - VEND_NAME
+
+  **RESOLVED ANOMALIES
+    1. Update Anomalies:
+      - Vendor name changes now only need to be updated in one place in the VENDORS table
+      
+    2. Insertion Anomalies:
+      - We can now add new vendors before they have products
+      - We can add new products before they're sold
+      
+    3. Deletion Anomalies:
+      - Deleting all products from a vendor no longer loses vendor information
+      - Vendor information is preserved independently of products
+
+  * See "16-004 Designing and Building a Relational Database - Question 4" for the diagram
